@@ -1,0 +1,21 @@
+# Flip Garden
+
+## About
+Flip Garden is a free visual portfolio showcase for card collectors. Collectors can display their Pokemon, Sports, Yu-Gi-Oh, Magic: The Gathering, and any other TCG collections in a beautiful digital garden format.
+
+## Features
+- Visual Portfolio: Display cards in stunning visual grids with high-res images and custom layouts
+- Collection Value Tracker: Real-time market data showing individual card values and total portfolio trends
+- Public Showcase Pages: Shareable public pages for every collector
+- Discovery Feed: Browse collections from collectors worldwide
+- Trade Connections: Connect with other collectors for trades and networking
+- Rarity Badges: Automatic rarity classification (Holo, Ultra Rare, Secret Rare, etc.)
+
+## Pricing
+Free to use. Optional premium themes available later for extra customization.
+
+## Card Types Supported
+Pokemon TCG, Sports Cards, Yu-Gi-Oh, Magic: The Gathering, and any other trading card game.
+
+## URL
+https://flip.garden
