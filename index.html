@@ -59,7 +59,7 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
 /* Collection Preview */
 .collection-preview{max-width:540px;margin:0 auto 40px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
 .cp-header{background:var(--surface);padding:16px 20px;font-weight:700;font-size:.9rem;display:flex;justify-content:space-between;border-bottom:1px solid var(--border)}
-.cp-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:14px 20px;border-bottom:1px solid var(--border);font-size:.85rem;align-items:center}
+.cp-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;padding:14px 20px;border-bottom:1px solid var(--border);font-size:.85rem;align-items:center;cursor:pointer}
 .cp-row:last-child{border:none}
 .cp-card{font-weight:600}
 .cp-type{color:var(--accent);font-size:.8rem}
@@ -82,12 +82,12 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
 .section-title{font-size:clamp(1.5rem,3vw,2.5rem);font-weight:800;text-align:center;margin-bottom:12px}
 .section-sub{text-align:center;color:var(--muted);max-width:550px;margin:0 auto 48px}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px}
-.step{text-align:center;padding:32px}
+.step{text-align:center;padding:32px;cursor:pointer}
 .step-num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#059669);color:#fff;font-weight:800;font-size:1.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
 .step h3{font-size:1.15rem;font-weight:700;margin-bottom:8px}
 .step p{color:var(--muted);font-size:.9rem}
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.feat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:all .3s}
+.feat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:all .3s;cursor:pointer}
 .feat:hover{border-color:var(--primary);transform:translateY(-2px)}
 .feat-icon{font-size:2rem;margin-bottom:16px}
 .feat h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
@@ -160,10 +160,10 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
 <p class="hero-sub">The visual portfolio for card collectors. Showcase your Pokemon, Sports, Yu-Gi-Oh, Magic &amp; TCG collections. Track value. Connect with collectors.</p>
 <div class="collection-preview">
   <div class="cp-header"><span>My Garden</span><span style="color:var(--primary)">Live Preview</span></div>
-  <div class="cp-row"><span class="cp-card">Charizard VMAX Alt<br><span class="cp-type">Pokemon</span></span><span class="cp-val">$342</span><span class="cp-rarity ultra">Ultra Rare</span><span style="color:var(--primary);font-size:.8rem">+12%</span></div>
-  <div class="cp-row"><span class="cp-card">Luka Doncic Prizm Silver<br><span class="cp-type">Sports</span></span><span class="cp-val">$285</span><span class="cp-rarity rare">Rare</span><span style="color:var(--primary);font-size:.8rem">+8%</span></div>
-  <div class="cp-row"><span class="cp-card">Blue-Eyes White Dragon<br><span class="cp-type">Yu-Gi-Oh</span></span><span class="cp-val">$178</span><span class="cp-rarity holo">Holo</span><span style="color:var(--danger);font-size:.8rem">-3%</span></div>
-  <div class="cp-row"><span class="cp-card">Black Lotus (Proxy)<br><span class="cp-type">Magic</span></span><span class="cp-val">$95</span><span class="cp-rarity rare">Rare</span><span style="color:var(--primary);font-size:.8rem">+5%</span></div>
+  <div class="cp-row" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><span class="cp-card">Charizard VMAX Alt<br><span class="cp-type">Pokemon</span></span><span class="cp-val">$342</span><span class="cp-rarity ultra">Ultra Rare</span><span style="color:var(--primary);font-size:.8rem">+12%</span></div>
+  <div class="cp-row" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><span class="cp-card">Luka Doncic Prizm Silver<br><span class="cp-type">Sports</span></span><span class="cp-val">$285</span><span class="cp-rarity rare">Rare</span><span style="color:var(--primary);font-size:.8rem">+8%</span></div>
+  <div class="cp-row" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><span class="cp-card">Blue-Eyes White Dragon<br><span class="cp-type">Yu-Gi-Oh</span></span><span class="cp-val">$178</span><span class="cp-rarity holo">Holo</span><span style="color:var(--danger);font-size:.8rem">-3%</span></div>
+  <div class="cp-row" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><span class="cp-card">Black Lotus (Proxy)<br><span class="cp-type">Magic</span></span><span class="cp-val">$95</span><span class="cp-rarity rare">Rare</span><span style="color:var(--primary);font-size:.8rem">+5%</span></div>
   <div class="cp-total"><span>Collection Value</span><span class="total-val">$900</span></div>
 </div>
 <button class="hero-cta" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Start Your Garden Free</button>
@@ -178,9 +178,9 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
 <h2 class="section-title">How It Works</h2>
 <p class="section-sub">Three steps to build your digital card garden</p>
 <div class="steps">
-  <div class="step"><div class="step-num">1</div><h3>Add Your Cards</h3><p>Search and add cards from any TCG. Pokemon, Sports, Yu-Gi-Oh, Magic &mdash; if it's a card, it belongs in your garden.</p></div>
-  <div class="step"><div class="step-num">2</div><h3>Build Your Garden</h3><p>Organize your collection into beautiful visual displays. Track value changes, rarity, and condition over time.</p></div>
-  <div class="step"><div class="step-num">3</div><h3>Share &amp; Discover</h3><p>Get a public showcase page. Browse other collectors' gardens. Find rare cards and connect for trades.</p></div>
+  <div class="step" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="step-num">1</div><h3>Add Your Cards</h3><p>Search and add cards from any TCG. Pokemon, Sports, Yu-Gi-Oh, Magic &mdash; if it's a card, it belongs in your garden.</p></div>
+  <div class="step" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="step-num">2</div><h3>Build Your Garden</h3><p>Organize your collection into beautiful visual displays. Track value changes, rarity, and condition over time.</p></div>
+  <div class="step" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="step-num">3</div><h3>Share &amp; Discover</h3><p>Get a public showcase page. Browse other collectors' gardens. Find rare cards and connect for trades.</p></div>
 </div>
 </div></section>
 
@@ -188,12 +188,12 @@ a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
 <h2 class="section-title">Built for Collectors</h2>
 <p class="section-sub">Everything you need to showcase and grow your collection</p>
 <div class="features">
-  <div class="feat"><div class="feat-icon">🖼️</div><h3>Visual Portfolio</h3><p>Display your cards in a stunning visual grid. High-res images, custom layouts, and beautiful themes that make your collection shine.</p></div>
-  <div class="feat"><div class="feat-icon">📈</div><h3>Collection Value Tracker</h3><p>Real-time market data shows what your collection is worth. Track individual card values and total portfolio trends over time.</p></div>
-  <div class="feat"><div class="feat-icon">🌐</div><h3>Public Showcase Pages</h3><p>Every collector gets a shareable public page. Show off your garden to friends, trading partners, and the community.</p></div>
-  <div class="feat"><div class="feat-icon">🔍</div><h3>Discovery Feed</h3><p>Browse collections from collectors worldwide. Find rare cards, get inspired, and discover new sets to chase.</p></div>
-  <div class="feat"><div class="feat-icon">🤝</div><h3>Trade Connections</h3><p>Connect with collectors who have cards you want. Message, negotiate, and build your network of trading partners.</p></div>
-  <div class="feat"><div class="feat-icon">✨</div><h3>Rarity Badges</h3><p>Automatic rarity classification for every card. Holo, Ultra Rare, Secret Rare &mdash; badges that make your collection pop.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">🖼️</div><h3>Visual Portfolio</h3><p>Display your cards in a stunning visual grid. High-res images, custom layouts, and beautiful themes that make your collection shine.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">📈</div><h3>Collection Value Tracker</h3><p>Real-time market data shows what your collection is worth. Track individual card values and total portfolio trends over time.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">🌐</div><h3>Public Showcase Pages</h3><p>Every collector gets a shareable public page. Show off your garden to friends, trading partners, and the community.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">🔍</div><h3>Discovery Feed</h3><p>Browse collections from collectors worldwide. Find rare cards, get inspired, and discover new sets to chase.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">🤝</div><h3>Trade Connections</h3><p>Connect with collectors who have cards you want. Message, negotiate, and build your network of trading partners.</p></div>
+  <div class="feat" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})"><div class="feat-icon">✨</div><h3>Rarity Badges</h3><p>Automatic rarity classification for every card. Holo, Ultra Rare, Secret Rare &mdash; badges that make your collection pop.</p></div>
 </div>
 </div></section>
 
@@ -312,6 +312,10 @@ function copyAddr(el){navigator.clipboard.writeText(el.textContent);const o=el.t
 stRef.child('totalVisitors').once('value',s=>stRef.update({totalVisitors:(s.val()||0)+1}));
 checkExisting();trackEvent('page_view');
 const r=getRef();if(r)localStorage.setItem('flipgarden_ref',r);
+</script>
+<!-- Watermark Protection -->
+<script>
+(function(){var b='sell.party',t='Sell Party';function w(){var c=document.createElement('canvas');c.width=300;c.height=150;var x=c.getContext('2d');x.save();x.translate(150,75);x.rotate(-.44);x.font='600 18px Arial';x.fillStyle='rgba(255,255,255,0.04)';x.textAlign='center';x.fillText(t,0,-10);x.font='400 12px Arial';x.fillStyle='rgba(255,255,255,0.03)';x.fillText(b,0,10);x.restore();var d=document.createElement('div');d.id='_spw';d.setAttribute('data-sp','1');Object.assign(d.style,{position:'fixed',top:'0',left:'0',width:'100vw',height:'100vh',pointerEvents:'none',zIndex:'2147483647',backgroundImage:'url('+c.toDataURL()+')',backgroundRepeat:'repeat',opacity:'1',userSelect:'none'});document.body.appendChild(d);new MutationObserver(function(){if(!document.getElementById('_spw'))w()}).observe(document.body,{childList:true,subtree:true})}setInterval(function(){var e=document.getElementById('_spw');if(!e)w();else{e.style.display='';e.style.visibility='';e.style.opacity='1'}},2000);document.addEventListener('DOMContentLoaded',function(){w()})})();
 </script>
 </body>
 </html>
